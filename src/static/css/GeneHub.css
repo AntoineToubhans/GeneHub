@@ -19,3 +19,31 @@ body {
   margin-left: -212px;
   margin-top: -26px;
 }
+
+.widget {
+  width: 250px;
+  background-color: lightgray;
+  border: 1px solid black;
+  float: left;
+  margin: 25px;
+}
+
+.widget .button {
+  text-align: center;
+  color: lightgray;
+  background-color: darkgreen;
+  border-bottom: 1px solid black;
+}
+
+.widget .button:hover {
+  cursor: pointer;
+}
+
+.widget .button,
+.widget .content {
+  padding: 10px;
+}
+
+.hidden {
+  display: none;
+}
