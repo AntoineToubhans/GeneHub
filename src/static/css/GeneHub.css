@@ -1,3 +1,7 @@
 * {
-    font-family: sans-serif;
+  font-family: sans-serif;
+}
+
+body {
+  background-image: url("/img/tree.jpg")
 }
