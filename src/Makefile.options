@@ -5,10 +5,12 @@
 
 PROJECT_NAME := GeneHub
 
-# Source files for the server
-SERVER_FILES := $(wildcard *.eliomi *.eliom)
-# Source files for the client
-CLIENT_FILES := $(wildcard *.eliomi *.eliom)
+FILES := templates.eliom \
+         server_services.eliom \
+         server_register.eliom
+
+SERVER_FILES := $(FILES)
+CLIENT_FILES := $(FILES)
 
 # OCamlfind packages for the server
 SERVER_PACKAGES := lwt.ppx js_of_ocaml.deriving.ppx
