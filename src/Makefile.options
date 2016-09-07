@@ -5,12 +5,22 @@
 
 PROJECT_NAME := GeneHub
 
-FILES := templates.eliom \
-         server_services.eliom \
-         server_register.eliom
+ML_CLIENT_FILES :=
+ML_SERVER_FILES := utils.mli \
+                   utils.ml \
+                   date.mli \
+                   date.ml \
+                   coordinates.mli \
+                   coordinates.ml \
+                   ancestry_tree.mli \
+                   ancestry_tree.ml
 
-SERVER_FILES := $(FILES)
-CLIENT_FILES := $(FILES)
+ELIOM_FILES := templates.eliom \
+               server_services.eliom \
+               server_register.eliom
+
+SERVER_FILES := $(ML_SERVER_FILES) $(ELIOM_FILES)
+CLIENT_FILES := $(ML_CLIENT_FILES) $(ELIOM_FILES)
 
 # OCamlfind packages for the server
 SERVER_PACKAGES := lwt.ppx js_of_ocaml.deriving.ppx
@@ -25,7 +35,7 @@ PERSISTENT_DATA_BACKEND = dbm
 
 # Debug application (yes/no): Debugging info in compilation,
 # JavaScript, ocsigenserver
-DEBUG := no
+DEBUG := yes
 
 # User to run server with (make run.*)
 WWWUSER := www-data

@@ -2,6 +2,7 @@
     open Eliom_lib
     open Eliom_content
     open Html5.D
+    open Ancestry_tree
 ]
 
 let app_title = "GeneHub"
@@ -25,5 +26,6 @@ let make_page =
 
 let main_body =
   body [
-    h2 [pcdata "GeneHub"];
+    h2 [pcdata "GeneHub"] ;
+    Ancestry_tree.to_html Ancestry_tree.me ;
   ]
