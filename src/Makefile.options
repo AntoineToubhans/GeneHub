@@ -8,6 +8,8 @@ PROJECT_NAME := GeneHub
 ML_CLIENT_FILES :=
 ML_SERVER_FILES := utils.mli \
                    utils.ml \
+                   uid_manager.mli \
+                   uid_manager.ml \
                    date.mli \
                    date.ml \
                    coordinates.mli \
