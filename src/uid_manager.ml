@@ -1,8 +1,7 @@
 type uid = int
-type t = int ref
+type uid_manager = int
 
-let init () = ref 0
+let uid_manager_init () = 0
 
-let generate x = x := !x + 1; !x -1
-let free i x =
-  if i +1 = !x then x := i
+let uid_generate x = x, x + 1
+let uid_free i x = if i + 1 = x then i else x

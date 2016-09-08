@@ -27,5 +27,5 @@ let make_page =
 let main_body =
   body [
     h2 [pcdata "GeneHub"] ;
-    Ancestry_tree.to_html Ancestry_tree.me ;
+    Ancestry_tree.to_html Fixture_ancestry_tree.thierry ;
   ]

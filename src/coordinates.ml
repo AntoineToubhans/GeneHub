@@ -1,13 +1,19 @@
 open Eliom_content
 open Html5.D
+open Utils
 
 type location = string
 type t = {
   date:  Date.t;
-  place: location;
+  place: location option;
 }
 
-let make date place = {
+let empty = {
+  date  = Date.empty;
+  place = None
+}
+
+let make date ?(place = None) = {
   date;
   place;
 }
@@ -15,10 +21,10 @@ let make date place = {
 let to_html x =
   div [
     div [
-      pcdata "Date:" ;
+      pcdata "Date: " ;
       pcdata (Date.to_string_short x.date) ;
     ] ;
     div [
-      pcdata (Printf.sprintf "Place: %s" x.place) ;
+      pcdata (Printf.sprintf "Place: %s" (option_eval (fun s -> s) ~default:"" x.place)) ;
     ] ;
   ]

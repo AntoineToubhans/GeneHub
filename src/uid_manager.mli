@@ -1,7 +1,7 @@
 type uid
-type t
+type uid_manager
 
-val init: unit -> t
+val uid_manager_init: unit -> uid_manager
 
-val generate: t -> uid
-val free: uid -> t -> unit
+val uid_generate: uid_manager -> uid * uid_manager
+val uid_free: uid -> uid_manager -> uid_manager

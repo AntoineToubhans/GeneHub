@@ -5,24 +5,25 @@
 
 PROJECT_NAME := GeneHub
 
-ML_CLIENT_FILES :=
-ML_SERVER_FILES := utils.mli \
-                   utils.ml \
-                   uid_manager.mli \
-                   uid_manager.ml \
-                   date.mli \
-                   date.ml \
-                   coordinates.mli \
-                   coordinates.ml \
-                   ancestry_tree.mli \
-                   ancestry_tree.ml
+ML_FILES := fixture_ancestry_tree.mli \
+            fixture_ancestry_tree.ml \
+            ancestry_tree.mli \
+            ancestry_tree.ml \
+            coordinates.mli \
+            coordinates.ml \
+            date.mli \
+            date.ml \
+            uid_manager.mli \
+            uid_manager.ml \
+            utils.mli \
+            utils.ml
 
 ELIOM_FILES := templates.eliom \
                server_services.eliom \
                server_register.eliom
 
-SERVER_FILES := $(ML_SERVER_FILES) $(ELIOM_FILES)
-CLIENT_FILES := $(ML_CLIENT_FILES) $(ELIOM_FILES)
+SERVER_FILES := $(ML_FILES) $(ELIOM_FILES)
+CLIENT_FILES := $(ELIOM_FILES) $(ML_FILES)
 
 # OCamlfind packages for the server
 SERVER_PACKAGES := lwt.ppx js_of_ocaml.deriving.ppx

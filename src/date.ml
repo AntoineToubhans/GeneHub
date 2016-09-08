@@ -6,6 +6,12 @@ type t = {
   day:   int option;
 }
 
+let empty = {
+  year  = None;
+  month = None;
+  day   = None;
+}
+
 let year year = {
   year  = Some year;
   month = None;
