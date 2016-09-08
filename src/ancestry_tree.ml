@@ -19,6 +19,36 @@ let me =
     birth      = myCoordinates;
   }
 
+let helene =
+  let birthDate = Date.year 1989 in
+  let coordinates = Coordinates.make birthDate "Harfleur" in
+  {
+    lastname   = Some "Toubhans";
+    firstnames = ["Hélène"];
+    uid        = 1;
+    birth      = coordinates;
+  }
+
+let thierry =
+  let birthDate = Date.year 1961 in
+  let coordinates = Coordinates.make birthDate "Nogent sur Marne" in
+  {
+    lastname   = Some "Toubhans";
+    firstnames = ["Thierry"; "Claude"; "Jean"];
+    uid        = 2;
+    birth      = coordinates;
+  }
+
+let nadine =
+  let birthDate = Date.year 1962 in
+  let coordinates = Coordinates.make birthDate "Saint Cloud" in
+  {
+    lastname   = Some "Pupier";
+    firstnames = ["Nadine"];
+    uid        = 3;
+    birth      = coordinates;
+  }
+
 let to_html ancestry =
   let html_lastname =
     match ancestry.lastname with
