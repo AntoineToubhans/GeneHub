@@ -26,6 +26,9 @@ let make_page =
 
 let main_body =
   body [
-    h2 [pcdata "GeneHub"] ;
-    Ancestry_tree.to_html Fixture_ancestry_tree.thierry ;
+    h2 ~a:[a_class ["genehub-title"]] [
+      img ~alt:"icon" ~src:(make_uri (Eliom_service.static_dir()) ["svg"; "favicon.svg"]) ();
+      pcdata "GeneHub" ;
+    ] ;
+(*   Ancestry_tree.to_html Fixture_ancestry_tree.thierry ; *)
   ]

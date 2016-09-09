@@ -1,7 +1,15 @@
 * {
-  font-family: sans-serif;
+  font-family: boldtitlefont;
 }
 
 body {
+  margin: 0;
   background-image: url("/img/tree.jpg")
+}
+
+.genehub-title {
+  background-color: #eeeeee;
+  margin-top: 0;
+  padding: 10px;
+  font-size: 35px;
 }
