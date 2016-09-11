@@ -1,0 +1,23 @@
+{
+  "name": "GeneHub",
+  "description": "An awesome genealogy website",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:AntoineToubhans/GeneHub.git"
+  },
+  "author": "Antoine Toubhans",
+  "contributors": [
+    {
+      "name": "Antoine Toubhans",
+      "email": "antoine@toubhans.org"
+    }
+  ],
+  "scripts": {
+  },
+  "dependencies": {
+    "less": "~2.7.1"
+  },
+  "devDependencies": {
+  }
+}
