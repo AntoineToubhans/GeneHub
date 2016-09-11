@@ -1,3 +1,5 @@
 src/_*
 src/.depend
 src/local
+src/static/css
+node_modules

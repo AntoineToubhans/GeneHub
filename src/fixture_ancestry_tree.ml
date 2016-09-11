@@ -13,12 +13,12 @@ let nadine, uid_manager =
   let coordinates = Coordinates.make birthDate ~place:(Some "Saint Cloud") in
   make_ancestry ~birth:coordinates "Pupier" ["Nadine"] uid_manager
 
-let me =
+let me, uid_manager =
   let birthDate = Date.year 1987 in
   let coordinates = Coordinates.make birthDate ~place:(Some "Harfleur") in
   make_ancestry ~birth:coordinates "Toubhans" ["Antoine"] uid_manager
 
-let helene =
+let helene, uid_manager =
   let birthDate = Date.year 1989 in
   let coordinates = Coordinates.make birthDate ~place:(Some "Harfleur") in
   make_ancestry ~birth:coordinates "Toubhans" ["Hélène"] uid_manager
