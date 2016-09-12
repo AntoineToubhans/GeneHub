@@ -9,7 +9,7 @@ let app_title = "GeneHub"
 
 let css_sheets =
   [
-    ["css";"GeneHub.css"]
+    ["css"; "genehub.css"] ;
   ]
 
 let link_genehub_icon =
