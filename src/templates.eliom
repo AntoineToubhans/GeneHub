@@ -18,17 +18,21 @@ let link_genehub_icon =
     ~rel:[`Icon]
     ()
 
-let make_page =
+let genehub_header =
+  div ~a:[a_class ["genehub-header"]] [
+    div ~a:[a_class ["genehub-title"]] [
+      img ~alt:"icon" ~src:(make_uri (Eliom_service.static_dir()) ["svg"; "favicon.svg"]) ();
+      div [pcdata app_title] ;
+    ] ;
+  ]
+
+let genehub_main_page () =
+  let body_elt = body [
+    genehub_header ;
+    div ~a:[a_class ["genehub-main"]] [] ;
+  ] in
   Eliom_tools.F.html
     ~title:app_title
     ~css:css_sheets
     ~other_head:[link_genehub_icon]
-
-let main_body =
-  body [
-    h2 ~a:[a_class ["genehub-title"]] [
-      img ~alt:"icon" ~src:(make_uri (Eliom_service.static_dir()) ["svg"; "favicon.svg"]) ();
-      pcdata "GeneHub" ;
-    ] ;
-(*   Ancestry_tree.to_html Fixture_ancestry_tree.thierry ; *)
-  ]
+    body_elt

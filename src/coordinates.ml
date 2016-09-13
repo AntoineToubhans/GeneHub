@@ -14,8 +14,8 @@ let empty = {
 }
 
 let make date ?(place = None) = {
-  date;
-  place;
+  date  = date;
+  place = place;
 }
 
 let to_html x =
