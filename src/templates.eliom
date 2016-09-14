@@ -19,7 +19,7 @@ let link_genehub_icon =
     ()
 
 let genehub_header =
-  div ~a:[a_class ["genehub-header"]] [
+  div ~a:[a_id "genehub-header"] [
     div ~a:[a_class ["genehub-title"]] [
       img ~alt:"icon" ~src:(make_uri (Eliom_service.static_dir()) ["svg"; "favicon.svg"]) ();
       div [pcdata app_title] ;
@@ -29,7 +29,7 @@ let genehub_header =
 let genehub_main_page () =
   let body_elt = body [
     genehub_header ;
-    div ~a:[a_class ["genehub-main"]] [] ;
+    div ~a:[a_id "genehub-main"] [] ;
   ] in
   Eliom_tools.F.html
     ~title:app_title
