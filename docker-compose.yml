@@ -1,3 +1,10 @@
+nginx-proxy:
+  image: jwilder/nginx-proxy
+  ports:
+    - '80:80'
+  volumes:
+    - /var/run/docker.sock:/tmp/docker.sock:ro
+
 server:
   image: toubi/ocsigen
   working_dir: /mnt/src
@@ -7,3 +14,5 @@ server:
   volumes:
     - .:/mnt
   command: make test.opt
+  environment:
+    VIRTUAL_HOST: 'genehub.dev'
