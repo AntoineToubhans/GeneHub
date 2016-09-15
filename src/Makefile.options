@@ -20,7 +20,9 @@ ML_FILES := fixture_ancestry_tree.mli \
 
 ELIOM_FILES := templates.eliom \
                server_services.eliom \
-               server_register.eliom
+               server_register.eliom \
+               client_utils.eliom \
+               client_main.eliom
 
 SERVER_FILES := $(ML_FILES) $(ELIOM_FILES)
 CLIENT_FILES := $(ELIOM_FILES) $(ML_FILES)

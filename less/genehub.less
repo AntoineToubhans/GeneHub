@@ -41,5 +41,36 @@ body {
 }
 
 #genehub-main {
-  
+  .login {
+    margin-top: 250px;
+    margin-left: calc(~'50% - 205px');
+    border: 1px solid @header-color-font;
+    border-radius: 3px;
+    width: 410px;
+    padding: 0;
+
+    * {
+      border: none;
+    }
+
+    .login-password,
+    .login-email {
+      width: 380px;
+      height: 40px;
+      padding: 5px 15px 5px 15px;
+    }
+
+    .login-password {
+      border-top: 1px solid @header-color-font;
+      border-bottom: 1px solid @header-color-font;
+    }
+
+    button {
+      background-color: @lightgreen;
+      cursor: pointer;
+      height: 50px;
+      width: 410px;
+      padding: 0;
+    }
+  }
 }
